@@ -31,26 +31,28 @@ from bms.lifepower import Lifepower
 from bms.lltjbd import LltJbd
 from bms.renogy import Renogy
 from bms.seplos import Seplos
+from bms.felicity import FelicitySolarRS485
 
 # from bms.ant import Ant
 # from bms.mnb import MNB
 # from bms.sinowealth import Sinowealth
 
 supported_bms_types = [
-    {"bms": Daly, "baud": 9600, "address": b"\x40"},
-    {"bms": Daly, "baud": 9600, "address": b"\x80"},
-    {"bms": Ecs, "baud": 19200},
-    {"bms": HeltecModbus, "baud": 9600},
-    {"bms": HLPdataBMS4S, "baud": 9600},
-    {"bms": Jkbms, "baud": 115200},
-    {"bms": Lifepower, "baud": 9600},
-    {"bms": LltJbd, "baud": 9600},
-    {"bms": Renogy, "baud": 9600, "address": b"\x30"},
-    {"bms": Renogy, "baud": 9600, "address": b"\xF7"},
-    {"bms": Seplos, "baud": 19200},
+    #{"bms": Daly, "baud": 9600, "address": b"\x40"},
+    #{"bms": Daly, "baud": 9600, "address": b"\x80"},
+    #{"bms": Ecs, "baud": 19200},
+    #{"bms": HeltecModbus, "baud": 9600},
+    #{"bms": HLPdataBMS4S, "baud": 9600},
+    #{"bms": Jkbms, "baud": 115200},
+    #{"bms": Lifepower, "baud": 9600},
+    #{"bms": LltJbd, "baud": 9600},
+    #{"bms": Renogy, "baud": 9600, "address": b"\x30"},
+    #{"bms": Renogy, "baud": 9600, "address": b"\xF7"},
+    #{"bms": Seplos, "baud": 19200},
     # {"bms": Ant, "baud": 19200},
     # {"bms": MNB, "baud": 9600},
     # {"bms": Sinowealth},
+    {"bms": FelicitySolarRS485, "baud": 9600, "address": 1},
 ]
 expected_bms_types = [
     battery_type
