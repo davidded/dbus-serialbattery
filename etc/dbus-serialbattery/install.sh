@@ -43,7 +43,7 @@ echo ""
 ## latest release
 if [ "$version" = "latest release (recommended)" ]; then
     # download latest release
-    curl -s https://api.github.com/repos/Louisvdw/dbus-serialbattery/releases/latest | grep "browser_download_url.*gz" | cut -d : -f 2,3 | tr -d \" | wget -O /tmp/venus-data.tar.gz -qi -
+    curl -s https://api.github.com/repos/davidded/dbus-serialbattery/releases/latest | grep "browser_download_url.*gz" | cut -d : -f 2,3 | tr -d \" | wget -O /tmp/venus-data.tar.gz -qi -
 fi
 
 ## specific version
@@ -123,7 +123,7 @@ if [ "$version" = "nightly build" ]; then
     rm -rf /tmp/dbus-serialbattery-$branch
 
     # download driver
-    wget -O $branch.zip https://github.com/Louisvdw/dbus-serialbattery/archive/refs/heads/$branch.zip
+    wget -O $branch.zip https://github.com/davidded/dbus-serialbattery/archive/refs/heads/$branch.zip
     if [ $? -ne 0 ]; then
         echo "Error during downloading the TAR file. Please try again."
         # restore config.ini
